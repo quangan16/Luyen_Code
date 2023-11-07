@@ -22,6 +22,7 @@ long long factorial(int n){
     return fact;
 }
 
+
 int main()
 {
     ios_base::sync_with_stdio(0);

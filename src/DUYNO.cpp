@@ -29,11 +29,9 @@ void process(long long a)
 
 int main()
 {
-    
-    while (1)
+     long long b;
+    while (cin>>b)
     {
-        long long b;
-        cin >> b;
         process(b);
         cout<<endl;
     }

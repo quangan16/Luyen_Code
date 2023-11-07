@@ -1,5 +1,4 @@
 #include <iostream>
-#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -15,6 +14,22 @@ int GCD(int a, int b){
     return a+b;
 }
 
+void optimizePartition(int a, int b, int temp){
+	int c = abs(a), d = abs(b);
+    c /= GCD(abs(a), abs(b));
+    d /= GCD(abs(a), abs(b));
+    
+	if(c%d == 0){
+	    cout<<temp * (c/d);
+    }
+    else{
+        cout<<temp * c <<" " << d;
+    }
+  
+	
+  
+}
+
 int main()
 {
     ios_base::sync_with_stdio(0);
@@ -22,26 +37,18 @@ int main()
     cout.tie(0);
     int a,  b;
     cin>> a>> b;
-   
-    if(b == 0){
-        cout<<"INVALID";
-        return 0;
+    int temp = 0;
+    if(a*b < 0){
+        temp = -1;
+    }else{
+        temp = 1;
     }
-    if(a <0 && b < 0){
-        a = abs(a);
-        b = abs(b);
-    }
-    if(a >0 && b < 0){
-        a *= -1;
-        b = abs(b);
-    }
-    if(a != 0 && a%b == 0){
-        cout<<a/b;
-    }
-    else{
-        cout<< a/GCD(abs(a), abs(b))<< " "<< b/GCD(abs(a), abs(b));
-    }
-    
-    
+
+
+	if(b == 0){
+		cout<<"INVALID";
+		return 0;
+	}
+    optimizePartition(a, b, temp);
     return 0;
 }

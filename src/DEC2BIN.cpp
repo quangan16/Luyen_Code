@@ -18,6 +18,7 @@ int main()
         cin>>n;
         long long temp = n;
         int bit = 0;
+        string s;
         int i = 0;
         while(temp>0){
             bit = temp%2;

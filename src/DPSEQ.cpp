@@ -1,57 +1,45 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cstdint>
 
-using namespace std;
 
-int maxSumValue(int *inputArr, vector<int> &optiArr , int n, int k){
-    int sum = 0;
-    int opti = -1000;
-    int pos = 0;
-    // for(int i = 1; i<=n;i++){
-    //     if(inputArr[pos]>0){
-    //         sum += inputArr[i];
-    //         optiArr[i] = sum;
-    //         pos++;
-    //     }
-    
-    try
-    {
-        for(int i = 0; i<n;i+=pos){
-            for(int j = i+1; j<=i+k;j++){
-                if(sum+inputArr[j]>opti){
-                    opti = sum+inputArr[j];
-                    pos = j;
-                    optiArr[i] = pos;
-                }
-            }
-        sum+=inputArr[optiArr[i]];
+void InputArray(std::vector<int> &vector, int n){
+    int buffer;
+    while(n--){
+        std::cin>>buffer;
+        vector.push_back(buffer);
     }
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    
-    
-    return sum;
-
 }
 
-void inputArr(int *a, int n){
-    for(int i = 0; i < n; i++){
-        cin >> a[i];
+void OutputArray(std::vector<int> &vector){
+    for(int i:vector){
+        std::cout<< i;
     }
+}
+
+int32_t Process(std::vector<int> &vector, int maxStep){
+    int32_t sum = 0;
+    int32_t subMaxValue;
+    
+    for(int i = 1; i< vector.size() - maxStep; i++){
+        subMaxValue = vector[std::max(0, i - maxStep)];
+        for(int j = i - maxStep; j< i;j++ ){
+            
+        }
+    }
+   
 
 }
 
 int main()
 {
-    int n, k;
-    cin>>n>>k;
-    int a[n];
-    vector<int> optiArr(n, 0);
-    inputArr(a, n);
-    cout<<maxSumValue(a, optiArr, n, k);
 
-    cout<<endl;
+    int N, K;
+    std::cin>>N>>K;
+    std::vector<int> v;
+    InputArray(v, N);
+    OutputArray(v);
+    std::cout<<std::endl;
     return 0;
 }
