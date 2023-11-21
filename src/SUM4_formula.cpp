@@ -1,22 +1,21 @@
-#include <bits/stdc++.h>
+#include<iostream>
 
 using namespace std;
 
-double process(int n){
-    return (double)2*(1 - (double)1/(n+1));
-}
-
-int main()
-{
-    int T;
+int main(){
     int n;
-    cin>>T;
-    while(T--){
-        cin>>n;
-        cout<<fixed<<setprecision(8)<<process(n);
-        cout<<endl;
+    cin>>n;
+    int a[n];
+    int i = 0;
+    while(i<n){
+        cin>>a[i];
+        i++;
+
     }
-    
-    
-    return 0;
+    int j = 0;
+    while(j<n){
+        cout<<a[j];
+        j++;
+        
+    }
 }
