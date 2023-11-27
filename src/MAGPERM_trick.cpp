@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include<cmath>
+#include<algorithm>
 #define FOR(i, a, b) for(int i = a; i<=b;i++)
 
 using namespace std;
@@ -7,8 +9,8 @@ int main()
 {
     int n, k;
     cin>>n>>k;
-    int a[n+1];
-    bool b[n+1];
+    int a[100];
+    bool b[100];
     
     FOR(i, 1, n){
         b[i] = false;
@@ -36,14 +38,14 @@ int main()
 				else break;
 		}
    
-       if(count(b+1, b+1 +n, false)){
+        if(count(b+1, b+1 +n, false)){
         cout<<"-1";
-    }
-    else{
-        FOR(i, 1, n){
-        cout<<a[i]<<" ";
-    }
-    } 
+        }
+        else{
+            FOR(i, 1, n){
+            cout<<a[i]<<" ";
+        }
+        } 
     
         
 
