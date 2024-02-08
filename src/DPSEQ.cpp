@@ -1,45 +1,50 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <cstdint>
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<climits>
 
+using namespace std;
 
-void InputArray(std::vector<int> &vector, int n){
-    int buffer;
-    while(n--){
-        std::cin>>buffer;
-        vector.push_back(buffer);
+int res = INT_MIN;
+
+void Input(vector<int> &points,const int &length){
+    for(int i = 0; i < length; i++){
+        int temp;
+        cin>>temp;
+        points.push_back(temp);
     }
 }
 
-void OutputArray(std::vector<int> &vector){
-    for(int i:vector){
-        std::cout<< i;
+void Output(vector<int> &points, int N){
+    for(int i = 0; i <= N; i++){
+        cout<<points[i]<<" ";
     }
 }
 
-int32_t Process(std::vector<int> &vector, int maxStep){
-    int32_t sum = 0;
-    int32_t subMaxValue;
-    
-    for(int i = 1; i< vector.size() - maxStep; i++){
-        subMaxValue = vector[std::max(0, i - maxStep)];
-        for(int j = i - maxStep; j< i;j++ ){
+void Process(const vector<int> &points, vector<int> &opti, int K){
+    opti[0] = 0;
+    opti[1] = points[0];
+    for(int i = 1; i<= points.size(); i++){
+        for(int j = i -1;  j>= i - K; j-- ){
+            if(j>=0){    
+                opti[i] = max(points[i -1] + opti[j],  opti[i]); 
+              
+            }
+           
             
         }
+       
     }
-   
-
+    
 }
 
-int main()
-{
-
+int main(){
     int N, K;
-    std::cin>>N>>K;
-    std::vector<int> v;
-    InputArray(v, N);
-    OutputArray(v);
-    std::cout<<std::endl;
-    return 0;
+    cin>>N>>K;
+    vector<int> points;
+    vector<int> opti(10005, INT_MIN);
+    Input(points, N);
+    Process(points,opti, K);
+    // Output(opti, N);
+    cout<<*max_element(opti.begin(), opti.end());
 }

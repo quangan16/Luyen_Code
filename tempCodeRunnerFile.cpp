@@ -1,25 +1,38 @@
 #include<iostream>
-#include<string>
+#include<vector>
 using namespace std;
+int N;
+vector<int> a;
+vector<int> check(10, false);
 
-int Process(const string &s,const char &c){
-    int count = 0;
-    for(int i = 0 ; i < s.size(); i++){
-        if(s[i] == c || s[i] == c-32){
-            count++;
-        }
+void Output(){
+    for(int i : a){
+        if(i > 0)
+        cout<<i;
     }
-    return count;
+    cout<<endl;
+}
+
+void Try(int i){
+    for( int j = 1; j <= N; j++){
+        if(check[j] == false){
+            a[i] = j;
+            check[j] = true;
+            if(i == N){
+                Output();
+            }else{
+                Try(i+1);
+            }
+            check[j] = false;
+        }
+        
+    }
 }
 
 int main(){
-    string s;
-    getline(cin, s);
-    int T;
-    cin>>T;
-    char c;
-    while(T--){
-        cin>>c;
-        cout<<Process(s, c)<<endl;
-    }
+    
+    cin>>N;
+    a.resize(N+1, 0);
+    Try(1);
+
 }
