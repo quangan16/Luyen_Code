@@ -1,0 +1,15 @@
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\bin\Debug\net8.0\C#.exe
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\bin\Debug\net8.0\C#.deps.json
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\bin\Debug\net8.0\C#.runtimeconfig.json
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\bin\Debug\net8.0\C#.dll
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\bin\Debug\net8.0\C#.pdb
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\C#.AssemblyInfoInputs.cache
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\C#.AssemblyInfo.cs
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\C#.csproj.CoreCompileInputs.cache
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\C#.sourcelink.json
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\C#.dll
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\refint\C#.dll
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\C#.pdb
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\C#.genruntimeconfig.cache
+C:\Users\nqan1\Documents\Dev_2024\Dev_Study\Luyen_Code\C#\obj\Debug\net8.0\ref\C#.dll
